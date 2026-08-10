@@ -63,7 +63,7 @@ def ask(payload: AskRequest):
                     "VALUES (%s, %s, %s)",
                     (question, answer, OLLAMA_MODEL),
                 )
-            conn.commit()
+            # conn.commit()
     except psycopg.Error:
         raise HTTPException(
             status_code=502,
